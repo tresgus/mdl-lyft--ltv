@@ -6,11 +6,18 @@ The full analysis is in [`lyft-ltv.ipynb`](lyft-ltv.ipynb).
 
 ## Tableau Dashboard
 
-*Coming soon:* an interactive Tableau Public dashboard built from the cleaned data in [`Data/Cleaned-Data`](Data/Cleaned-Data).
+**[View the interactive dashboard on Tableau Public](https://public.tableau.com/app/profile/robert.guskiewicz/viz/LyftLTVWorkbook/Dashboard2)**
 
-<!-- Replace this comment with the Tableau Public link and a screenshot, e.g.
-[![Dashboard preview](images/dashboard.png)](https://public.tableau.com/app/profile/...)
--->
+[![Lyft Driver Lifetime Value dashboard](Images/LyftLVTDash.png)](https://public.tableau.com/app/profile/robert.guskiewicz/viz/LyftLTVWorkbook/Dashboard2)
+
+Built in Tableau Public from the cleaned data in [`Data/Cleaned-Data`](Data/Cleaned-Data), the dashboard tells the story of the four driver segments:
+
+- **LTV vs. driver metrics:** scatter plots of each driver's LTV against total distance, total time driving, total rides, and days on the platform, colored by segment.
+- **Share of drivers vs. share of revenue:** excellent drivers are 6% of drivers but bring in 18% of revenue, while low-value drivers are 41% of drivers but bring in only 8%.
+- **Revenue share by cluster:** a treemap of how much of Lyft's revenue each segment generates.
+- **What separates fair drivers from good ones:** fair and good drivers drive at similar times and take similar ride lengths, but good drivers average about 6.5 rides per day compared with about 4 for fair drivers. Ride-count bonuses or weekly streak rewards could help close that gap of about 2.5 rides per day.
+
+A cluster filter lets you focus on a single segment.
 
 ## Key Findings
 
@@ -84,6 +91,8 @@ Each ride's cost is calculated from this rate card: $2.00 base fare, $1.15 per m
 ├── Data/
 │   ├── Raw-Data/          # original StrataScratch CSVs
 │   └── Cleaned-Data/      # outputs of the notebook, used for the Tableau dashboard
+├── Images/
+│   └── LyftLVTDash.png    # Tableau dashboard screenshot
 ├── lyft-ltv.ipynb         # full analysis
 ├── requirements.txt
 └── README.md
